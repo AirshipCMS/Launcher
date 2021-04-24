@@ -18,7 +18,7 @@ RUN export VERSION=$(curl -s https://install.airshipcms.io/Linux64/LATEST) && \
 
 RUN apk del curl
 
-ENV HOME /airship
+ENV HOME /srv
 USER nobody
 WORKDIR ${HOME}
 

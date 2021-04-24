@@ -23,7 +23,7 @@ cd ~/Projects/my-airship-project
 Use this command in your airship project directory when using OSX, Linux, or Windows Subsystem Linux.
 
 ```sh
-docker run --rm -it -v $PWD:/airship -p 9800-9828:9800-9828 -p 9001:9001 airshipcms/launcher
+docker run --rm -it -v $PWD:/srv -p 9800-9828:9800-9828 -p 9001:9001 airshipcms/launcher
 ```
 
 ## Windows
@@ -41,7 +41,7 @@ Use one of the following commands in your airship project directory when using W
 Use this command in the Command Shell `cmd.exe`.
 
 ```sh
-docker run --rm -it -v %cd%:/airship -p 9800-9828:9800-9828 -p 9001:9001 airshipcms/launcher
+docker run --rm -it -v %cd%:/srv -p 9800-9828:9800-9828 -p 9001:9001 airshipcms/launcher
 ```
 
 ### PowerShell
@@ -49,5 +49,5 @@ docker run --rm -it -v %cd%:/airship -p 9800-9828:9800-9828 -p 9001:9001 airship
 Use this command in PowerShell.
 
 ```sh
-docker run --rm -it -v "$($PWD):/airship" -p 9800-9828:9800-9828 -p 9001:9001 airshipcms/launcher
+docker run --rm -it -v "$($PWD):/srv" -p 9800-9828:9800-9828 -p 9001:9001 airshipcms/launcher
 ```
