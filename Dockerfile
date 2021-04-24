@@ -18,10 +18,10 @@ RUN export VERSION=$(curl -s https://install.airshipcms.io/Linux64/LATEST) && \
 
 RUN apk del curl
 
-ENV HOME /srv
+ENV HOME /home
 ENV PS1="\e[32m\[\[\e[36m\]🐳 Airship Launcher\e[32m\] $\[\e[m\] "
 USER nobody
-WORKDIR ${HOME}
+WORKDIR /srv
 
 EXPOSE 9800-9828
 EXPOSE 9001
