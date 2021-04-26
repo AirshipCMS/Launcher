@@ -14,7 +14,8 @@ WORKDIR /tmp
 RUN export VERSION=$(curl -s https://install.airshipcms.io/Linux64/LATEST) && \
     curl -O https://install.airshipcms.io/Linux64/airship-${VERSION}.tar.bz2 && \
     tar -xjf airship-${VERSION}.tar.bz2 && \
-    mv airship airship-server /usr/local/bin/
+    mv airship airship-server /usr/local/bin/ && \
+    rm airship-${VERSION}.tar.bz2
 
 RUN apk del curl
 
