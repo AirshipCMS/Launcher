@@ -20,9 +20,11 @@ RUN export VERSION=$(curl -s https://install.airshipcms.io/Linux64/LATEST) && \
 RUN apk del curl
 
 ENV HOME /home
-ENV PS1="\e[32m\[\[\e[36m\]🐳 Airship Launcher\e[32m\] $\[\e[m\] "
+RUN echo -e "export PS1=$'\e[32m\[\[\e[36m\]\[\xF0\x9F\x90\xB3\] Airship Launcher\e[32m\] $\[\e[m\] '" >> /etc/profile.d/airship_prompt.sh
 USER nobody
 WORKDIR /srv
 
 EXPOSE 9800-9828
 EXPOSE 9001
+
+CMD ["/bin/ash", "-l"]
