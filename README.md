@@ -1,3 +1,7 @@
+# Airship CMS
+
+Get Started here: [https://airshipcms.io/quickstart-guide](https://airshipcms.io/quickstart-guide) 🚀
+
 # Airship Launcher with Docker
 
 Building Dockerfile pulls latest Linux64 bins from https://install.airshipcms.io
